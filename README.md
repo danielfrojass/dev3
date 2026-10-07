@@ -1,6 +1,7 @@
 # Pokémon Stadium Lite
 
 Realizada por: Kevin Steven Posso Sanchez Cod.2080636-2724 y Daniel Rojas Cod.2569189-2724
+
 Mini-aplicación de escritorio desarrollada en **Java Swing** que simula un combate por turnos entre dos Pokémon obtenidos en vivo desde **PokeAPI**. La aplicación permite cargar un Pokémon por nombre, seleccionar uno aleatoriamente, visualizar sus datos principales y ejecutar una batalla con registro de eventos. El proyecto fue desarrollado siguiendo los requisitos del laboratorio de Desarrollo de Software III.
 
 El diseño separa la consulta de la API, el modelo de datos y las reglas del combate. `PokeApiClient` se encarga de realizar las peticiones HTTP y transformar el JSON de PokeAPI en objetos `Pokemon`; `Battle` contiene las reglas del combate y notifica los eventos mediante `BattleListener`; y `PokeApiGUI` controla la interfaz Swing. Para evitar bloquear la interfaz, las consultas de red se ejecutan con `SwingWorker` y los turnos de la batalla se ejecutan mediante `javax.swing.Timer`.
